@@ -1,18 +1,19 @@
-import React from 'react'
-import NavBar from '../Componentes/Comunes/NavBar'
-import { Route, Routes } from 'react-router-dom'
-import Generos from '../Componentes/Generos/Generos'
-import Director from '../Componentes/Directores/Director'
-import Productora from '../Componentes/Productoras/Productora'
-import Tipo from '../Componentes/Tipos/Tipo'
-import Media from '../Componentes/Media/Media'
-import NotFound from '../Componentes/Comunes/NotFound'
-import Footer from '../Componentes/Comunes/Footer'
-import GestionMedia from '../Componentes/Media/GestionMedia'
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+
+import NavBar from '../Componentes/Comunes/NavBar';
+import Footer from '../Componentes/Comunes/Footer';
+import NotFound from '../Componentes/Comunes/NotFound';
+
+import Generos from '../Componentes/Generos/Generos';
+import Director from '../Componentes/Directores/Director';
+import Productora from '../Componentes/Productoras/Productora';
+import Tipo from '../Componentes/Tipos/Tipo';
+import Media from '../Componentes/Media/Media';
+import GestionMedia from '../Componentes/Media/GestionMedia';
 
 export default function AppRouter() {
-
-  const TITLE = ' IUD Películas '
+  const TITLE = 'IUD Películas';
 
   return (
     <>
@@ -27,10 +28,10 @@ export default function AppRouter() {
           <Route path="/Tipos" element={<Tipo />} />
           <Route path="/Media" element={<GestionMedia />} />
           <Route path="*" element={<NotFound />} />
-        </ Routes>
+        </Routes>
       </main>
 
       <Footer />
     </>
-  )
+  );
 }
